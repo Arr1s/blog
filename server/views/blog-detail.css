@@ -1,16 +1,16 @@
-.blog-wrapper {
+.nerd-wrapper {
     max-width: 1080px;
     margin: 0 auto;
     padding: 2rem 1rem;
   }
   
-  .blog-container {
+  .nerd-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
   }
   
-  .blog-image {
+  .nerd-image {
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -20,7 +20,7 @@
     flex-shrink: 0;
   }
   
-  .blog-intro {
+  .nerd-intro {
     flex: 1;
     display: flex;
     font-size: 1.5rem;
@@ -28,26 +28,26 @@
     align-items: center;
   }
 
-  .blog-section {
+  .nerd-section {
     margin-top: 1rem;
   }
   
   @media (max-width: 760px) {
-    .blog-container {
+    .nerd-container {
       flex-direction: column;
     }
   
-    .blog-image,
-    .blog-intro {
+    .nerd-image,
+    .nerd-intro {
       flex: unset;
     }
 
-    .blog-image {
+    .nerd-image {
         max-width: 100%;
       }
   }
   
-  .blog-content {
+  .nerd-content {
     margin-bottom: 2rem;
 
     h2 {

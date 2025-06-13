@@ -1,5 +1,20 @@
+*, *::before, *::after {
+  cursor: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-black-color: #0c0f16;
+  --primary-white-color: #b0bac6;
+  --primary-red-color: #ff3d00;
+}
+
+
 header {
-  background-color: #f8f8f8;
+  background-color: var(--primary-black-color);
+ 
   padding: 10px 20px;
 
   nav ul {
@@ -16,7 +31,7 @@ header {
   
   nav a {
     text-decoration: none;
-    color: #000000;
+    color: var(--primary-white-color);
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -52,4 +67,82 @@ header {
 
 footer {
   padding: 1rem;
+}
+
+/* //////////////// */
+/* CROSSHAIR CSS */
+/* //////////////// */
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  pointer-events: none;
+  
+  width: 200px;
+  height: 200px;
+  
+/*   background-color:#ff03; */
+  
+  background-image:
+    radial-gradient(
+      #0000 12px,
+      #f006 0,
+      #0000 90px
+    );
+  
+  translate:
+    calc( var(--cursor-x) * 1px - 50% )
+    calc( var(--cursor-y) * 1px - 50% );
+  
+  z-index: 9999;
+  
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+/* Layer 1: Crosshair lines */
+.crosshair {
+  grid-area:1/1;
+  
+  width: 36px;
+  height: 36px;
+ 
+  background-image:
+     radial-gradient(
+      red 2px,
+      #f006 0,
+      #0009 12px,
+      red 0 14px,
+      #0000 0 
+    ),
+    linear-gradient(
+      red 5px, 
+      #0000 0 31px,
+      red 0
+    ),
+    linear-gradient(
+      90deg,
+      red 5px, 
+      #0000 0 31px,
+      red 0
+    );
+  
+  background-size:
+    28px 28px,
+    2px 100%,
+    100% 2px;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+
+
+
+
+/* On Click */
+.cursor.click .crosshair{
+  scale:0.9;
 }

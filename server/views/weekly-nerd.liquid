@@ -6,9 +6,9 @@
   <p>Hier heb ik een stuk geschreven over elke weekly nerd die langs is gekomen op de minor. Ik beshrijf mijn inzichten en wat ik ga meenemen.</p>
 </div>
   <ul class="weekly-nerd-grid">
-    {% for blog in blogs %}
+    {% for nerd in weeklyNerdData %}
       <li>
-        {% render 'server/components/card/card.liquid', blog: blog %}
+        {% render 'server/components/card/card.liquid', weeklyNerdData: weeklyNerdData %}
       </li>
     {% endfor %}
   </ul>

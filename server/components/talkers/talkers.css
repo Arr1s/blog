@@ -1,0 +1,35 @@
+.talkers {
+    background-image: url(https://static-dm.ubisoft.com/siege/prod/0488c0280e77f5f02cb0915c18fa2e7a.jpg);
+    padding: 2em;
+    background-color: var(--primary-black-color);
+    color: var(--primary-white-color);
+    & ul {
+        display: flex;
+        overflow: scroll;
+        /* padding: 2em; */
+    }
+    & li {
+        padding: 1em 0em;
+        width: 60vw;
+    }
+    /* figure {
+
+    } */
+    & img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+    }
+    & a {
+        background: var(--primary-red-color);
+        color: var(--primary-black-color);
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+        &:hover {
+            background: var(--primary-white-color);
+        }
+    }

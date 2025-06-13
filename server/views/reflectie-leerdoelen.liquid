@@ -2,20 +2,18 @@
 
 {% block content %}
 <div class="blog-wrapper">
-  <h1>{{ title }}</h1>
+  <h1>{{ title  }}</h1>
 
+  <ul>
     {% for doel in leerdoelen %}
-      <h2>{{ doel.title }}</h2>
-        <div class="blog-content">
-          {% for section in doel.content %}
-            <div class="blog-section">
-              <h3>{{ section.titel }}</h3>
-              {% for alinea in section.alinea %}
-                <p>{{ alinea }}</p>
-              {% endfor %}
-            </div>
-          {% endfor %}
-        </div>
+      <li>
+        <h2>{{ doel.naam }}</h2>
+        <p>{{ doel.wat }}</p>
+        <p>{{ doel.waarom }}</p>
+        <p>{{ doel.hoe }}</p>
+        <p>{{ doel.tevreden }}</p>
+      </li>
     {% endfor %}
+  </ul>
   </div>
 {% endblock %}

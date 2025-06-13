@@ -10,6 +10,7 @@
 
 /* component styling */
 @import '../server/components/card/card.css';
+@import '../server/components/talkers/talkers.css';
 
 body {
   color: black;

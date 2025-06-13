@@ -1,0 +1,17 @@
+<section class="talkers">
+    <ul>
+        {% for nerd in weeklyNerdData %}
+            <li>
+                <figure>
+                    <img src="{{ nerd.image.src }}" alt="{{ nerd.image.alt }}">
+                    <figcaption>
+                        <h2>{{ nerd.intro }}</h2>
+                        <small>{{ nerd.title }}</small>
+                        <p>{{ nerd.inleiding }}</p>
+                    </figcaption>
+                </figure>
+                <a href="/weekly-nerd/{{ nerd.id }}">Lees meer</a>    
+            </li>
+        {% endfor %}
+    </ul>
+</section>

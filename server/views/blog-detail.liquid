@@ -1,23 +1,23 @@
 {% layout "server/layouts/base.liquid" %}
 
 {% block content %}
-  <div class="blog-wrapper">
-    <div class="blog-container">
-      {% if blog.image %}
-        <img class="blog-image" src="{{ blog.image.src }}" alt="{{ blog.image.alt }}">
+  <div class="nerd-wrapper">
+    <div class="nerd-container">
+      {% if nerd.image %}
+        <img class="nerd-image" src="{{ nerd.image.src }}" alt="{{ nerd.image.alt }}">
         {% else %}
-        <img class="blog-image" src="/images/blank.png">
+        <img class="nerd-image" src="/images/blank.png">
       {% endif %}
 
-      {% if blog.inleiding %}
-        <div class="blog-intro">
-          <h1>{{ blog.title }}</h1>
-          <p>{{ blog.inleiding }}</p>
+      {% if nerd.inleiding %}
+        <div class="nerd-intro">
+          <h1>{{ nerd.title }}</h1>
+          <p>{{ nerd.inleiding }}</p>
         </div>
       {% endif %}
     </div>
-    <div class="blog-content">
-      {% for section in blog.content %}
+    <div class="nerd-content">
+      {% for section in nerd.content %}
         <h2>{{ section.titel }}</h2>
         {% for alinea in section.alinea %}
           <p>{{ alinea }}</p>

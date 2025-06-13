@@ -1,8 +1,11 @@
 {% layout "server/layouts/base.liquid" %}
 
 {% block content %}
+
+{% render '../components/talkers/talkers.liquid' weeklyNerdData: weeklyNerdData %}
+
 <div class="inleiding">
-  <h1>Quy's Weekly Nerd blog</h1>
+  <h1>Laurens' Weekly Nerd blog</h1>
   <p>Welkom op mijn blog waar ik schrijf over de Weekly Nerds op de minor Web Development, uitkomsten van de hackaton en
     mijn prsoonlijke leerdoelen. Hieronder vind je een overzicht van de onderwerpen:</p>
 </div>
