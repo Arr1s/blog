@@ -1,20 +1,62 @@
 {% layout "server/layouts/base.liquid" %}
 
 {% block content %}
+<div class="inleiding">
+  <h1>{{ title }}</h1>
+  <p>Hier vind u informatie over alle projecten die ik heb gevolgd en zijn gegeven gedurende de minor Web Design & Development. Selecteer een van de projecten om meer informatie en het eindresultaat met een linkje naar de repository te vinden, zowel als de (gast) docenten die geholpen hebben gedurende de verschillende projecten.</p>
+</div>
   <div class="blog-wrapper">
     <div class="blog-content">
-      <h1>{{ title }}</h1>
 
-      <ul>
-        {% for vak in vakken %}
-          <li>
-            <h2>{{ vak.name }}</h2>
-            <p>{{ vak.description }}</p>
-            <p>{{ vak.reflection }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-    
-    </div>
-  </div>
+
+<section class="projecten">
+  <form method="GET" action="/projecten">
+        <ul >
+          {% for vak in vakken %}
+            <li>
+              <img src="{{ vak.image.src }}" alt="{{ vak.image.alt | default: 'Afbeelding niet beschikbaar' }}">
+              <label><input type="radio" name="id" value="{{ vak.id }}" {% if selectedProject and selectedProject.id == vak.id %}checked{% endif %}>
+                {{ vak.name }}
+              </label>
+            </li>
+          {% endfor %}
+        </ul>
+        <button type="submit">Bekijk project</button>
+      </form>
+
+      {% if selectedProject %}
+        <section class="project-detail">
+          <figure>
+            <figcaption>
+              <h2>{{ selectedProject.name }}</h2>
+              <small> Door:
+                {% for lecturer in selectedProject.lecturers %}
+                  {{ lecturer }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+              </small>
+              <article>
+                <h3>Project omschrijving:</h3>
+                <p>{{ selectedProject.description }}</p>
+              </article>
+              
+             
+            </figcaption>
+            <img src="{{ selectedProject.image.src }}" alt="{{ selectedProject.image.alt | default: 'Afbeelding niet beschikbaar' }}">
+            </figure>
+                <figure>
+                  <figcaption>
+                    <h3>Project reflectie</h3>
+                    <p>{{ selectedProject.reflection }}</p>
+                    <a href="{{ selectedProject.iframe }}">Link naar website</a>
+                  </figcaption>
+                  <iframe src="{{ selectedProject.iframe }}"></iframe>
+                </figure>
+         
+          <a href="{{ selectedProject.github_repo }}">Github repository link</a>
+        </section>
+      {% endif %}
+
+</section>
+</div>
+</div>
 {% endblock %}

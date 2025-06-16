@@ -1,11 +1,12 @@
 .card {
-  background-color: #d9d9d9;
+  background-color: var(--primary-black-color);
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 1.5rem;
   margin: 1rem 0;
+  border: solid 1px var(--primary-white-color);
 }
 
 .card a {

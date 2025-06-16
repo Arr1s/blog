@@ -3,6 +3,8 @@ main {
   flex-direction: column;
 }
 
+
+
 body.home-page {
   display: flex;
   flex-direction: column;
@@ -22,27 +24,56 @@ body.home-page .main-menu {
 .middle-section {
   display: flex;
   background-image: url(https://static-dm.ubisoft.com/siege/prod/0488c0280e77f5f02cb0915c18fa2e7a.jpg);
-  & .projectsHomepage {
-    padding: 1.25rem;
-    & ul {
-      gap: 1.875rem;
+  gap: 1.25rem;
+
+  & p, h3 {
+    padding: 0.5rem;
+  }
+  & .favoriteTalker {
+    height: min-content;
+    & img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
     }
-    & figure {
-      display: flex;
-      gap: 1rem;
+    & a {
+      width: 100%;
+      display: block;
+    }
+  }
+   
+   
+    & div {
       background-color: var(--primary-black-color);
       color: var(--primary-white-color);
     }
-    & img {
-      width: 20%;
-      height: auto;
+    & h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    & .projectsHomepage {
+      max-width: 55vw;
+      & ul {
+        gap: 1.875rem;
+        display: flex;
+        flex-direction: column;
+      }
+      & img {
+        width: 40%;
+        height: 40%;
+      }
+      & figure {
+        display: flex;
+        gap: 1rem;
+        background-color: var(--primary-black-color);
+        color: var(--primary-white-color);
+      }
     }
   }
-  
-  
-}
+ 
 
-.meesterproef {
+.meesterproefHomepage {
   background-image: url(/public/images/FramerFramed.jpeg);
   background-size: cover;
   background-position: center;
@@ -53,7 +84,6 @@ body.home-page .main-menu {
   aspect-ratio: 4 / 3;
   object-fit: cover;
 
-  padding: 2rem;
   background-color: aqua; /* alleen zichtbaar als de image transparant is */
   & article {
     background-color: rgba(12,15,22,.66);
@@ -61,6 +91,15 @@ body.home-page .main-menu {
     backdrop-filter: blur(3px);
     color: var(--primary-white-color);
     max-width: 27.5rem;
-    padding: 1.875rem 1.875rem 4.375rem;
+    & h2, p {
+      padding: 0.5rem;
+    }
+  }
+  & div {
+    padding: 1.875rem;
+  }
+  & a {
+    width: 100%;
+    display: block;
   }
 }

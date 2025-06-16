@@ -49,9 +49,13 @@ app.get('/weekly-nerd', async (req, res) => {
 });
 
 app.get('/projecten', async (req, res) => {
+  const id = req.query.id;
+  const project = id ? vakken.find((vak) => vak.id === id) : null;
+
   return res.send(renderTemplate('server/views/projecten.liquid', {
     title: 'Mijn werk',
-    vakken: vakken
+    vakken: vakken,
+    selectedProject: project
   }));
 });
 

@@ -1,6 +1,5 @@
 .talkers {
     background-image: url(https://static-dm.ubisoft.com/siege/prod/0488c0280e77f5f02cb0915c18fa2e7a.jpg);
-    padding: 2em;
     background-color: var(--primary-black-color);
     color: var(--primary-white-color);
     & ul {
@@ -11,16 +10,19 @@
     & li {
         padding: 0em 2em;
         margin: 0 2em;
-        width: 60vw;
+        width: 30vw;
+        text-align: center;
+        background-color: var(--primary-black-color);
     }
     figure {
         margin: 0;
         padding: 0;
         position: relative;
-        width: 50vw;
-        padding-bottom: 100%; /* Aspect ratio 1:1 */
+
         border-radius: 0.5em;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+        border: solid 1px var(--primary-white-color);
     }
     & img {
             width: 100%;

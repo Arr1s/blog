@@ -1,19 +1,37 @@
 {% layout "server/layouts/base.liquid" %}
 
 {% block content %}
-<div class="blog-wrapper">
-  <h1>{{ title  }}</h1>
+<div class="inleiding">
+  <h1>{{ title }}</h1>
+  <p>Hieronder vind je mijn persoonlijke leerdoelen voor de minor Web Development. Deze doelen helpen mij om gericht te werken aan mijn vaardigheden en kennis tijdens deze periode. Elk doel bevat informatie over wat het inhoudt, waarom het belangrijk is, hoe ik het ga bereiken en wanneer ik tevreden ben met mijn voortgang.</p>
+</div>
+<section class="leerdoelen">
+  
 
-  <ul>
+  <ul >
     {% for doel in leerdoelen %}
       <li>
-        <h2>{{ doel.naam }}</h2>
-        <p>{{ doel.wat }}</p>
+        <h2>{{ doel.id }}. {{ doel.naam }}</h2>
+        <details open>
+          <summary>Wat is het?</summary>
+          <p>{{ doel.wat }}</p>
+        </details>
+       <details>
+        <summary>Waarom doe ik het?</summary>
         <p>{{ doel.waarom }}</p>
+       </details>
+      <details>
+        <summary>Hoe ga ik het doen?</summary>
         <p>{{ doel.hoe }}</p>
+      </details>
+       <details>
+        <summary>Wanneer ben ik tevreden?</summary>
         <p>{{ doel.tevreden }}</p>
+       </details>
+       
       </li>
     {% endfor %}
   </ul>
-  </div>
+</section>
+  
 {% endblock %}

@@ -15,7 +15,7 @@
 header {
   background-color: var(--primary-black-color);
  
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
 
   nav ul {
     list-style: none;
@@ -32,13 +32,15 @@ header {
   nav a {
     text-decoration: none;
     color: var(--primary-white-color);
+    background-color: var(--primary-black-color);
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 4px;
   }
   
   nav a:hover {
-    text-decoration: underline;
+    background: #FF3D00;
+    background: linear-gradient(0deg, var(--primary-red-color) 0%, var(--primary-red-color) 8%, var(--primary-black-color) 50%);
   }
 }
 
@@ -64,6 +66,24 @@ header {
     margin: 1rem 0;
   }
 }
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & h1, h2, h3, h4, p, summary, small {
+    color: var(--primary-white-color);
+  }
+}
+
+main {
+  background-image: url(https://static-dm.ubisoft.com/siege/prod/0488c0280e77f5f02cb0915c18fa2e7a.jpg);
+  & section {
+    padding: 2em;
+  }
+}
+
 
 footer {
   padding: 1rem;
@@ -138,11 +158,8 @@ footer {
   background-position:center;
 }
 
-
-
-
-
 /* On Click */
 .cursor.click .crosshair{
   scale:0.9;
 }
+

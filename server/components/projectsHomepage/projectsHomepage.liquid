@@ -1,15 +1,20 @@
 <article class="projectsHomepage">
+    <h2>Projecten</h2>
     <ul>
         {% for vak in randomVakken %}
         <li>
             <figure>
                 <img src="{{ vak.image.src }}" alt="{{ vak.image.alt }}">
                 <figcaption>
-                    <h2>{{ vak.name }}</h2>
+                    <h3>{{ vak.name }}</h3>
                     <p>{{ vak.description }}</p>
+                    <a href="/projects/{{ id }}">Lees meer</a>
                 </figcaption>
+               
             </figure> 
         </li>
         {% endfor %}
     </ul>
+    <a href="/projects">Zie alle vakken</a>
+
 </article>

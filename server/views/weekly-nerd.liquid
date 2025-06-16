@@ -3,13 +3,23 @@
 {% block content %}
   <div class="inleiding">
   <h1>{{ title }}</h1>
-  <p>Hier heb ik een stuk geschreven over elke weekly nerd die langs is gekomen op de minor. Ik beshrijf mijn inzichten en wat ik ga meenemen.</p>
+  <p>Hier heb ik een stuk geschreven over elke weekly nerd die langs is gekomen op de minor. Ik beshrijf mijn inzichten en wat ik ga meenemen verder in de minor, maar ook voor later in de toekomst wanneer ik als web-developer aan de slag ga.</p>
 </div>
+<section>
   <ul class="weekly-nerd-grid">
     {% for nerd in weeklyNerdData %}
       <li>
-        {% render 'server/components/card/card.liquid', weeklyNerdData: weeklyNerdData %}
+        <div class="card">
+  <a href="/weekly-nerd/{{ nerd.id }}/">
+  <img src="{% if nerd.image.src %}{{ nerd.image.src }}{% else %}/images/blank.png{% endif %}" alt="{{ nerd.image.alt | default: 'Afbeelding niet beschikbaar' }}">
+    <h2>{{ nerd.title }}</h2>
+    <p>{{ nerd.intro }}</p>
+  </a>
+</div>
+
       </li>
     {% endfor %}
   </ul>
+</section>
+ 
 {% endblock %}

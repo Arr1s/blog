@@ -7,15 +7,11 @@
 @import '../server/views/index.css';
 @import '../server/views/weekly-nerd.css';
 @import '../server/views/blog-detail.css';
+@import '../server/views/projecten.css';
+@import '../server/views/meesterproef.css';
+@import '../server/views/leerdoelen.css';
 
 /* component styling */
 @import '../server/components/card/card.css';
 @import '../server/components/talkers/talkers.css';
 
-body {
-  color: black;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}

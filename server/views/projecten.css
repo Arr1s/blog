@@ -1,0 +1,77 @@
+.projecten {
+    
+    min-height: 100vh;
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        & li {
+            display: flex;
+            
+            border: solid 1px var(--primary-white-color);
+            flex-direction: column;
+            max-width: 20vw;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem;
+            background-color: var(--primary-black-color);
+            color: var(--primary-white-color);
+            list-style: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: min-content;
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            }
+           & input[type="radio"] {
+            display: none;
+          }
+          & label {
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            background-color: var(--primary-red-color);
+            color: var(--primary-black-color);
+            padding: 0.5rem;
+          }
+        }
+    }
+    & img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+    .project-detail {
+        background-color: var(--primary-black-color);
+        border: solid 1px var(--primary-white-color);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        & figure {
+            display: flex;
+            gap: 1rem;
+            &:first-of-type {
+                flex-direction: row-reverse;
+            }
+            & img{
+                width: 45%;
+                height: fit-content;
+                height: auto;
+                aspect-ratio: 16 / 10;
+                object-fit: cover;
+            }
+            & iframe {
+                width: 450vw;
+            }
+            
+            & figcaption {
+                gap: 1rem;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

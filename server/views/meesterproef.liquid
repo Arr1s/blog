@@ -1,22 +1,43 @@
 {% layout "server/layouts/base.liquid" %}
 {% block content %}
+<div class="inleiding">
     <h1>{{ meesterproef.name }}</h1>
-    <h2>Algemene opdracht</h2>
-    <p>{{ meesterproef.general }}</p>
-    <h2>Opdracht Framer-Framed</h2>
-    <p>{{ meesterproef.description  }}</p>
-    <h2>Proces</h2>
-    <ul>
-        {% for week in meesterproef.content %}
-            <li>
-                <h3>{{ week.title }}</h3>
-                {% for item in week.proces %}
-                    <h4>{{ item.dag }}</h4>
-                    {% for regel in item.tekst %}
-                    <p>{{ regel }}</p>
-                    {% endfor %}
-                {% endfor %}
-            </li>
-        {% endfor %}
-    </ul>
+    <p>Hieronder vind je de uitwerking van mijn meesterproef. Deze opdracht was ter afsluiting van de minor Web Design & Development om te laten zien en ervaren dat wat ik allemaal gedurende de minor heb geleerd toe te passen valt op het echte werkveld. Hierbij hebben we met een bedrijf samengewerkt in een team om een afsluiting product tot stand te brengen. </p>
+</div>
+<div class="productBio">
+    <section>
+        <h2>Algemene opdracht</h2>
+        <p>{{ meesterproef.general }}</p>
+    </section>
+    <section>
+        <h2>Opdracht Framer-Framed</h2>
+        <p>{{ meesterproef.description  }}</p>
+    </section>
+    <section>
+        <h2>Proces</h2>
+        <ul>
+            {% for week in meesterproef.content %}
+                <li>
+                    <details>
+                        <summary>{{ week.title }}</summary>
+                        <ul>
+                            {% for item in week.proces %}
+                                <li>
+                                    <h3>{{ item.dag }}</h3>
+                                    {% for regel in item.tekst %}
+                                    <p>{{ regel }}</p>
+                                    {% endfor %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                      
+                    </details>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+
+   
+    
 {% endblock %}
