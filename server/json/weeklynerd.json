@@ -289,9 +289,9 @@
   {
     "id": "Dave-Bitter",
     "title": "Dave Bitter",
-    "Interesse": "Interesse: ⭐️⭐️⭐️⭐️⭐️",
+    "interesse": "Interesse: ⭐️⭐️⭐️⭐️⭐️",
     "image": {
-      "src": "",
+      "src": "/images/dave_bitter.jpeg",
       "alt": ""
     },
     "intro": "Dave Bitter vertelt over 'The rise of AI-powered Voice Interfaces'.",
@@ -318,9 +318,9 @@
   {
     "id": "Steve-Jonk",
     "title": "Steve Jonk",
-    "Interesse": "Interesse: ⭐️⭐️⭐️⭐️⭐️ ",
+    "interesse": "Interesse: ⭐️⭐️⭐️⭐️⭐️ ",
     "image": {
-      "src": "",
+      "src": "/images/steve_jonk.jpeg",
       "alt": ""
     },
     "intro": "Steve Jonk vertelt over het bouwen van een Twitter Follow Bot & Follower Scraper",
@@ -346,9 +346,9 @@
   {
     "id": "Clarke-Verdel",
     "title": "Clarke Verdel",
-    "Interesse": "Interesse: ⭐️⭐️⭐️⭐️",
+    "interesse": "Interesse: ⭐️⭐️⭐️⭐️",
     "image": {
-      "src": "",
+      "src": "/images/clarke_verdel.jpeg",
       "alt": ""
     },
     "intro": "How do you automate testing your components like a real user?",
@@ -376,14 +376,14 @@
     ]
   },
   {
-    "id": "Marvin",
-    "title": "Marvin",
-    "Interesse": "Interesse: ⭐️⭐️⭐️⭐️",
+    "id": "Marvin-Sernee",
+    "title": "Marvin Sernee",
+    "interesse": "Interesse: ⭐️⭐️⭐️⭐️",
     "image": {
-      "src": "",
+      "src": "/images/marvin_sernee.jpeg",
       "alt": ""
     },
-    "intro": "Marvin vertelt over het project Oculi Mundi en hoe hij met HTML & CSS iets out of the box toegankelijk houd",
+    "intro": "Marvin Sernee vertelt over het project Oculi Mundi en hoe hij met HTML & CSS iets out of the box toegankelijk houd",
     "inleiding": "2 en half jaar werk, oud CMD student, rijksmuseum groot verdienste, toegankelijkheid",
     "content": [
       {
@@ -405,14 +405,14 @@
     ]
   },
   {
-    "id": "Johan-Huigman",
-    "title": "Johan Huigman",
-    "Interesse": "Interesse: ⭐️⭐️",
+    "id": "Johan-Huijkman",
+    "title": "Johan Huijkman",
+    "interesse": "Interesse: ⭐️⭐️",
     "image": {
-      "src": "",
+      "src": "/images/johan_huijkman.jpeg",
       "alt": ""
     },
-    "intro": "Johan Huigman vertelt over toegankelijkheid als (zelf genoemde) Accesbility Engineer",
+    "intro": "Johan Huijkman vertelt over toegankelijkheid als (zelf genoemde) Accesbility Engineer",
     "inleiding": "'I'm not disabled, the world disables me.' Dit is een quote van Darice, die veel betekent voor Johan.",
     "content": [
       {
@@ -438,10 +438,10 @@
   },
   {
     "id": "Miriam-Suzanne",
-    "title": "Mirian Suzanne",
-    "Interesse": "Interesse: ⭐️⭐️⭐️⭐️",
+    "title": "Miriam Suzanne",
+    "interesse": "Interesse: ⭐️⭐️⭐️⭐️",
     "image": {
-      "src": "",
+      "src": "/images/miriam_suzanne.jpeg",
       "alt": ""
     },
     "intro": "Tech in 2025 is depressing",

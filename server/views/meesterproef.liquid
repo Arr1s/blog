@@ -1,0 +1,22 @@
+{% layout "server/layouts/base.liquid" %}
+{% block content %}
+    <h1>{{ meesterproef.name }}</h1>
+    <h2>Algemene opdracht</h2>
+    <p>{{ meesterproef.general }}</p>
+    <h2>Opdracht Framer-Framed</h2>
+    <p>{{ meesterproef.description  }}</p>
+    <h2>Proces</h2>
+    <ul>
+        {% for week in meesterproef.content %}
+            <li>
+                <h3>{{ week.title }}</h3>
+                {% for item in week.proces %}
+                    <h4>{{ item.dag }}</h4>
+                    {% for regel in item.tekst %}
+                    <p>{{ regel }}</p>
+                    {% endfor %}
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

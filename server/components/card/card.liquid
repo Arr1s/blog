@@ -1,11 +1,11 @@
 <div class="card">
-  <a href="/weekly-nerd/blog/{{ blog.id }}/">
-    {% if blog.image %}
-      <img src="{{ blog.image.src }}" alt="{{ blog.image.alt}}" class="card-image">
+  <a href="/weekly-nerd/{{ nerd.id }}/">
+    {% if nerd.image %}
+      <img src="{{ nerd.image.src }}" alt="{{ nerd.image.alt}}" class="card-image">
     {% else %}
       <img src="/images/blank.png" alt="Geen afbeelding beschikbaar" class="card-image">
     {% endif %}
-    <h2>{{ blog.title }}</h2>
-    <p>{{ blog.intro }}</p>
+    <h2>{{ nerd.title }}</h2>
+    <p>{{ nerd.intro }}</p>
   </a>
 </div>

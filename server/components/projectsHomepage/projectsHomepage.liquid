@@ -1,0 +1,15 @@
+<article class="projectsHomepage">
+    <ul>
+        {% for vak in randomVakken %}
+        <li>
+            <figure>
+                <img src="{{ vak.image.src }}" alt="{{ vak.image.alt }}">
+                <figcaption>
+                    <h2>{{ vak.name }}</h2>
+                    <p>{{ vak.description }}</p>
+                </figcaption>
+            </figure> 
+        </li>
+        {% endfor %}
+    </ul>
+</article>

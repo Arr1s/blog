@@ -2,12 +2,22 @@
 {
         "id": "WAFS",
         "name": "Web Apps From Scratch",
+        "lecturers": ["Vasilis van Gemert", "Krijn Hoetmer", "Cyd Stumpel", "Sanne 't Hooft"],
         "description": "Ontwerp en bouw een persoonlijke website waarmee je jezelf voorstelt, waarmee je jouw startniveau overstijgt en waarmee je jouw doelen voor de minor presenteert.",
-        "reflection": "WAFS was een spannend begin waar ik snel tegen mijzelf aan begon te lopen. Zowel op het gebied van conceptualiseren, als het gebied van CSS had ik veel ruimte voor vooruitgang. De nieuwste CSS techniek die ik gebruikte was 'scroll-driven animations'. Aan het eind werd mijn werk tentoongesteld als 'gefaald met experimenteren', iets waar ik me toen nog niet bewust van was, dat voornamelijk mijn trade merk ging worden in deze minor. Proberen, falen, proberen en nog eens falen. En alhoewel dit zowel frustrerend was, met soms als resultaat dat ik niet echt iets had om te laten zien, was het ook erg leerzaam."
+        "reflection": "WAFS was een spannend begin waar ik snel tegen mijzelf aan begon te lopen. Zowel op het gebied van conceptualiseren, als het gebied van CSS had ik veel ruimte voor vooruitgang. De nieuwste CSS techniek die ik gebruikte was 'scroll-driven animations'. Aan het eind werd mijn werk tentoongesteld als 'gefaald met experimenteren', iets waar ik me toen nog niet bewust van was, dat voornamelijk mijn trade merk ging worden in deze minor. Proberen, falen, proberen en nog eens falen. En alhoewel dit zowel frustrerend was, met soms als resultaat dat ik niet echt iets had om te laten zien, was het ook erg leerzaam.",
+        "image": {
+            "src": "/images/wafs.jpg",
+            "alt": "WAFS vak afbeelding"
+        }
     },
 {
         "id": "CttR",
+        "image": {
+            "src": "/images/CttR.jpg",
+            "alt": "CSS to the Rescue vak afbeelding"
+        },
         "name": "CSS to the Rescue",
+        "lecturers": ["Sanne 't Hooft", "Nils Binder", "Roel Nieskens"],
         "description": [
             "We find the web fascinating. In recent years, CSS has become a mature and powerful language (no longer a bottleneck - on the contrary). However, many of the (new) CSS features are not yet fully utilised. Some parts of the spec are unfairly (still) not embraced, while other parts are so new and/or complex that we may not have fully grasped the possibilities yet. It's your wonderful task to map out the uncharted territories of the CSS world.",
             "In this four-week course, you'll be experimenting with CSS techniques that are new (to you). You’ll create an innovative, experimental, and enjoyable experience - using only vanilla HTML and vanilla CSS (frameworks, preprocessors, libraries, and JavaScript are not allowed)."
@@ -16,13 +26,23 @@
     },
  {
         "id": "BT",
+        "image": {
+            "src": "/images/vakken/BrowserTechnology.avif",
+            "alt": "Browser Technologies vak afbeelding"
+        },
+        "lecturers": ["Vasilis van Gemert", "Krijn Hoetmer", "Jeremy Keith"],
         "name": "Browser Technologies",
         "description": "Belastingaangifte doen is een van de meest complexe taken die mensen moeten doen. Als eindopdracht ga je een officiële belasting-PDF omzetten naar een interactief en duidelijk web-formulier.",
         "reflection": "Browser Technologies was een vak bijna helemaal naar mijn hart. De semantische HTML schrijven, HTML uitputten tot al zijn attributen, nadenken over error states, interacties, en logica achter een formulier is iets wat ik snel erg leuk begon te vinden. Dat is ook het meeste wat ik eruit heb kunnen halen. HTML schrijven, maar ook heel veel Javascript schrijven. Iets wat ik voor het eerst in mijn studie echt deed, en langzaam begon te begrijpen, wat me hielp zelfverzekerder te worden. Javascript was opeens niet meer een groot vraagteken, maar ik wist waar ik kon beginnen, en wist waar ik naartoe wou werken. Javascript en semantisch HTML waren de grootste plus punten van dit vak, echter werd wel nog eens duidelijker dan mijn CSS niet sterk in elkaar zat. Ik zat veel rond te spelen met margins en paddings, en wist totaal niet wat ik moest doen. Dit is iets waar ik meer focus op had moeten leggen, gezien ik wist dat dit mijn zwakke plek is."
     },
 {
         "id": "Hackathon",
+        "image": {
+            "src": "/images/hackathon.jpg",
+            "alt": "Hackathon vak afbeelding"
+        },
         "name": "Hackathon",
+        "lecturers": ["Vasilis van Gemert", "Krijn Hoetmer", "Sanne 't Hooft", "Cyd Stumpel"],
         "description": [
 "De opdracht bestaat uit 2 delen. In een team van 3 personen:",
  "Ontwerp en bouw een digitale loftuiting voor de vrouwen in tech die de wereld veranderen en/of veranderd hebben (gebruik daarbij de data uit de API).",
@@ -32,7 +52,12 @@
     },
  {
         "id": "HCD",
+        "image": {
+            "src": "/images/HCD.avif",
+            "alt": "Human Centered Design vak afbeelding"
+        },
         "name": "Human Centered Design",
+        "lecturers": ["Vasilis van Gemert", "Marie van Driessche"],
         "description": [
 "Roger studeert filosofie en hij wil graag annotaties kunnen maken in de (digitale) boeken die hij leest, en die annotaties makkelijk terug kunnen vinden.",
 "Roger heeft maculadegeneratie. Hij kan steeds slechter zien en is nu op het punt dat hij echt niet meer zonder screen reader kan."
@@ -41,7 +66,12 @@
     },
 {
         "id": "API",
+        "image": {
+            "src": "/images/API.avif",
+            "alt": "API vak afbeelding"
+        },
         "name": "API",
+        "lecturers": ["Declan Rek", "Cyd Stumpel"],
         "description": [
 "In dit vak zullen we een van de meest voorkomende app-concepten van vandaag gebruiken en ontdekken dat we deze kunnen maken met moderne webtechnologie met als doel om een rijke gebruikerservaring creëeren.",
 "De randvoorwaarden zijn: minimaal een overzichts- en detailpagina, gebouwd in TinyHTTP + Liquid, minimaal een content API, minimaal twee Web API's"

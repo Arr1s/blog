@@ -1,19 +1,29 @@
 {% layout "server/layouts/base.liquid" %}
 
 {% block content %}
+<section>
+  <div class="inleiding">
+    <h1>Laurens' Weekly Nerd blog</h1>
+    <p>Welkom op mijn blog waar ik schrijf over de Weekly Nerds op de minor Web Development, uitkomsten van de hackaton en
+      mijn prsoonlijke leerdoelen. Hieronder vind je een overzicht van de onderwerpen:</p>
+  </div>
+
+</section>
+
 
 {% render '../components/talkers/talkers.liquid' weeklyNerdData: weeklyNerdData %}
 
-<div class="inleiding">
-  <h1>Laurens' Weekly Nerd blog</h1>
-  <p>Welkom op mijn blog waar ik schrijf over de Weekly Nerds op de minor Web Development, uitkomsten van de hackaton en
-    mijn prsoonlijke leerdoelen. Hieronder vind je een overzicht van de onderwerpen:</p>
-</div>
-<div class="main-menu">
-  <ul>
-    <li><a href="/weekly-nerd">Weekly Nerds</a></li>
-    <li><a href="/hackaton">Hackaton</a></li>
-    <li><a href="/reflectie-leerdoelen">Reflectie en Leerdoelen</a></li>
-  </ul>
-</div>
+<section class="middle-section">
+  {% if featuredNerd %}
+    {% render '../components/favoriteTalker/favoriteTalker.liquid' featuredNerd: featuredNerd %}
+  {% else %}
+  <p>Er is geen featured Nerd</p>
+  {% endif %}
+  {% render '../components/projectsHomepage/projectsHomepage.liquid' randomVakken: randomVakken: %}
+</section>
+
+<section class="meesterproef">
+  {% render '../components/meesterproefHomepage/meesterproefHomepage.liquid' meesterproef: meesterproef %}
+</section>
+
 {% endblock %}

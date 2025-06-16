@@ -5,8 +5,13 @@ import sirv from 'sirv';
 import weeklynerd from './json/weeklynerd.json' assert { type: 'json' };
 import leerdoelen from './json/leerdoelen.json' assert { type: 'json'};
 import vakken from './json/vakken.json' assert { type: 'json'};
+import meesterproef from './json/meesterproef.json' assert { type: 'json' };  
 
-
+// Helperfunctie: kies willekeurig 1 element
+function getRandomItems(arr, count) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
 
 const engine = new Liquid({
   extname: '.liquid',
@@ -20,10 +25,19 @@ app
   .listen(3000, () => console.log('Server available on http://localhost:3000'));
 
 app.get('/', async (req, res) => {
+  const topRatedNerds = weeklynerd.filter(nerd => nerd.interesse?.includes("Interesse: ⭐️⭐️⭐️⭐️⭐️"));
   
+  const featuredNerd = getRandomItems(topRatedNerds, 1)[0] || null;
+  console.log(featuredNerd);
+
+  const randomVakken = getRandomItems(vakken, 3);
+
   return res.send(renderTemplate('server/views/index.liquid', {
     title: 'Home',
     weeklyNerdData: weeklynerd,
+    featuredNerd,
+    randomVakken,
+    meesterproef,
   }));
 });
 
@@ -47,6 +61,15 @@ app.get('/reflectie-leerdoelen', async (req, res) => {
     leerdoelen: leerdoelen
   }));
 });
+
+app.get('/meesterproef', async (req, res) => {
+  console.log(meesterproef);
+  return res.send(renderTemplate('server/views/meesterproef.liquid', {
+    title: 'Meesterproef',
+    meesterproef
+  }));
+}
+);
 
 // Detailpagina voor een specifieke blog
 app.get('/weekly-nerd/:id', async (req, res) => {
