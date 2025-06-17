@@ -64,7 +64,7 @@
                 object-fit: cover;
             }
             & iframe {
-                width: 450vw;
+                width: 500vw;
             }
             
             & figcaption {

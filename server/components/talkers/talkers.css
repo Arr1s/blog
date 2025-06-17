@@ -8,21 +8,21 @@
         /* padding: 2em; */
     }
     & li {
-        padding: 0em 2em;
         margin: 0 2em;
-        width: 30vw;
         text-align: center;
         background-color: var(--primary-black-color);
+        border: solid 1px var(--primary-white-color);
+        height: min-content;
     }
     figure {
         margin: 0;
         padding: 0;
         position: relative;
-
+        width: 20em;
         border-radius: 0.5em;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
-        border: solid 1px var(--primary-white-color);
+        
     }
     & img {
             width: 100%;
@@ -38,6 +38,7 @@
         width: 100%;
         text-align: center;
         padding: 1em;
+        display: block;
         &:hover {
             background: var(--primary-white-color);
         }

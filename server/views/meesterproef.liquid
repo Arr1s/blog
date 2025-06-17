@@ -6,13 +6,16 @@
 </div>
 <div class="productBio">
     <section>
-        <h2>Algemene opdracht</h2>
-        <p>{{ meesterproef.general }}</p>
-    </section>
-    <section>
+        <article>
+            <h2>Algemene opdracht</h2>
+            <p>{{ meesterproef.general }}</p>
+        </article>
+        <article>
         <h2>Opdracht Framer-Framed</h2>
         <p>{{ meesterproef.description  }}</p>
+    </article>
     </section>
+   
     <section>
         <h2>Proces</h2>
         <ul>
@@ -35,6 +38,20 @@
                 </li>
             {% endfor %}
         </ul>
+        <article>
+            <figure>
+                <figcaption>
+                    <h2>Conclusie</h2>
+                    {% for regel in meesterproef.conclusie %}
+                    <p>{{ regel }}</p>
+                    {% endfor %}
+                    <a href="{{ meesterproef.iframe }}">Link naar eindproduct</a>
+                </figcaption>
+                <iframe src="{{ meesterproef.iframe }}"></iframe>
+            </figure>
+            
+        </article>
+       
     </section>
 </div>
 
