@@ -2,10 +2,10 @@ import { App } from '@tinyhttp/app';
 import { logger } from '@tinyhttp/logger';
 import { Liquid } from 'liquidjs';
 import sirv from 'sirv';
-import weeklynerd from './json/weeklynerd.json' assert { type: 'json' };
-import leerdoelen from './json/leerdoelen.json' assert { type: 'json'};
-import vakken from './json/vakken.json' assert { type: 'json'};
-import meesterproef from './json/meesterproef.json' assert { type: 'json' };  
+import { weeklynerd } from './json/weeklynerd.js';
+import { leerdoelen } from './json/leerdoelen.js';
+import { vakken } from './json/vakken.js';
+import { meesterproef } from './json/meesterproef.js';  
 
 // Helperfunctie: kies willekeurig 1 element
 function getRandomItems(arr, count) {
